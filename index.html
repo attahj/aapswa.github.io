@@ -1,71 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Afghan Association of Puget Sound - Community Center</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-:root{
-  --forest:#0F4C3A;
-  --forest-mid:#155D43;
-  --forest-light:#1A7C56;
-  --afghan-red:#C41E3A;
-  --red-light:#D63456;
-  --copper:#B87333;
-  --copper-light:#D4924E;
-  --cream:#F9F7F4;
-  --warm:#FDFBF9;
-  --ink:#1A1A18;
-  --muted:#6B6B63;
-  --faint:#A5A59D;
-  --border:#E5E0D8;
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--warm);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;}
-h1,h2,h3{font-family:"Fraunces",serif;letter-spacing:-0.025em;line-height:1.1;}
-.btn{display:inline-block;text-decoration:none;font-family:"Plus Jakarta Sans",sans-serif;font-weight:600;font-size:13.5px;letter-spacing:0.06em;text-transform:uppercase;padding:13px 28px;border-radius:3px;border:none;cursor:pointer;transition:transform 0.15s,background 0.2s,box-shadow 0.2s;}
-.btn:active{transform:scale(0.98);}
-.btn-f{background:var(--forest);color:#fff;}
-.btn-f:hover{background:var(--forest-light);box-shadow:0 4px 16px rgba(15,76,58,.25);transform:translateY(-1px);}
-.btn-r{background:var(--afghan-red);color:#fff;}
-.btn-r:hover{background:var(--red-light);box-shadow:0 4px 16px rgba(196,30,58,.3);transform:translateY(-1px);}
-.btn-c{background:var(--copper);color:#fff;}
-.btn-c:hover{background:var(--copper-light);box-shadow:0 4px 16px rgba(184,115,51,.3);transform:translateY(-1px);}
-.btn-ow{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45);}
-.btn-ow:hover{border-color:rgba(255,255,255,.85);background:rgba(255,255,255,.07);}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 36px;background:rgba(253,251,249,.93);backdrop-filter:blur(16px);border-bottom:1px solid rgba(229,224,216,.6);transition:box-shadow 0.3s;}
-nav.sc{box-shadow:0 2px 20px rgba(15,76,58,.08);}
-.nl{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.nl span{font-family:"Plus Jakarta Sans",sans-serif;font-weight:700;font-size:15px;color:var(--forest);}
-.nm{display:flex;align-items:center;gap:28px;}
-.nm a{font-size:13.5px;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;}
-.nm a:hover{color:var(--forest);}
-.cnt{max-width:1080px;margin:0 auto;}
-.sec{padding:100px 40px;}
-.lbl{font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--afghan-red);}
-.card{background:#fff;border:1px solid var(--border);border-radius:10px;}
-.sh{box-shadow:0 1px 3px rgba(26,26,24,.04),0 6px 20px rgba(26,26,24,.06),0 20px 48px rgba(26,26,24,.04);}
-.fl{display:block;font-size:11.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:7px;}
-.fi{width:100%;padding:11px 15px;border:1.5px solid var(--border);border-radius:6px;font-family:"Plus Jakarta Sans",sans-serif;font-size:14px;background:#fff;color:var(--ink);transition:border-color 0.2s,box-shadow 0.2s;}
-.fi:focus{outline:none;border-color:var(--forest-light);box-shadow:0 0 0 3px rgba(26,124,86,.1);}
-.sp{border:1.5px solid var(--border);border-radius:100px;padding:9px 18px;font-size:13.5px;cursor:pointer;transition:all 0.18s;background:#fff;font-family:"Plus Jakarta Sans",sans-serif;font-weight:500;color:var(--muted);}
-.sp:hover{border-color:var(--forest-light);color:var(--forest);background:rgba(26,124,86,.04);}
-.sp.sel{background:var(--forest);border-color:var(--forest);color:#fff;}
-.pt{height:2px;background:var(--border);border-radius:2px;}
-.pf{height:100%;border-radius:2px;background:linear-gradient(90deg, var(--forest) 0%, var(--afghan-red) 100%);transition:width 0.4s cubic-bezier(.4,0,.2,1);}
-.fu{opacity:0;transform:translateY(20px);transition:opacity 0.55s ease,transform 0.55s ease;}
-.fu.vis{opacity:1;transform:none;}
-@media(max-width:768px){nav{padding:0 20px;}.nm{display:none;}.sec{padding:64px 20px;}.tc{grid-template-columns:1fr!important;}.twc{grid-template-columns:1fr!important;gap:40px!important;}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afghan Community of Puget Sound — Community Center Project</title>
+    <meta name="description" content="Building a permanent community center for Afghan families across the greater Seattle area.">
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1920'); background-size: cover; background-position: center; }
+        .animate-bounce { animation: bounce 2s infinite; }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    </style>
 </head>
-<body>
-    <!-- Navigation Header -->
-    <header class="fixed w-full top-0 z-50 bg-white shadow-md">
+<body class="bg-white">
+    <header class="fixed w-full top-0 z-50 bg-white shadow-md transition-shadow">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-amber-600">AAPS</h1>
             <nav class="hidden md:flex space-x-8">
@@ -79,17 +31,15 @@ nav.sc{box-shadow:0 2px 20px rgba(15,76,58,.08);}
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
-            <a href="#about" class="block px-6 py-3 text-gray-700 hover:bg-amber-50">About</a>
-            <a href="#project" class="block px-6 py-3 text-gray-700 hover:bg-amber-50">Project</a>
-            <a href="#progress" class="block px-6 py-3 text-gray-700 hover:bg-amber-50">Progress</a>
-            <a href="#donate" class="block px-6 py-3 text-gray-700 hover:bg-amber-50">Donate</a>
-            <a href="#contact" class="block px-6 py-3 text-gray-700 hover:bg-amber-50">Contact</a>
+            <a href="#about" class="block px-6 py-3 text-gray-700 hover:bg-amber-50 mobile-link">About</a>
+            <a href="#project" class="block px-6 py-3 text-gray-700 hover:bg-amber-50 mobile-link">Project</a>
+            <a href="#progress" class="block px-6 py-3 text-gray-700 hover:bg-amber-50 mobile-link">Progress</a>
+            <a href="#donate" class="block px-6 py-3 text-gray-700 hover:bg-amber-50 mobile-link">Donate</a>
+            <a href="#contact" class="block px-6 py-3 text-gray-700 hover:bg-amber-50 mobile-link">Contact</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-bg relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
             <p class="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4">Afghan Association of Puget Sound</p>
@@ -114,7 +64,6 @@ nav.sc{box-shadow:0 2px 20px rgba(15,76,58,.08);}
         </a>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -177,7 +126,6 @@ nav.sc{box-shadow:0 2px 20px rgba(15,76,58,.08);}
         </div>
     </section>
 
-    <!-- Project Section -->
     <section id="project" class="py-24 bg-gray-900">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -252,7 +200,6 @@ nav.sc{box-shadow:0 2px 20px rgba(15,76,58,.08);}
         </div>
     </section>
 
-    <!-- Progress Section -->
     <section id="progress" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -289,7 +236,6 @@ nav.sc{box-shadow:0 2px 20px rgba(15,76,58,.08);}
         </div>
     </section>
 
-    <!-- Donate Section -->
     <section id="donate" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -304,8 +250,8 @@ nav.sc{box-shadow:0 2px 20px rgba(15,76,58,.08);}
                 <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-8">
                     <h3 class="text-gray-900 font-bold text-xl mb-6">Choose an Amount</h3>
 
-                    <div class="grid grid-cols-3 gap-3 mb-4">
-                        <button class="donation-btn py-3 rounded-xl font-semibold text-sm transition-all duration-200 border bg-amber-600 text-white border-amber-600 shadow" data-amount="50">$50</button>
+                    <div class="grid grid-cols-3 gap-3 mb-4" id="donationButtons">
+                        <button class="donation-btn py-3 rounded-xl font-semibold text-sm transition-all duration-200 border bg-gray-50 text-gray-700 border-gray-200 hover:border-amber-400 hover:text-amber-700" data-amount="50">$50</button>
                         <button class="donation-btn py-3 rounded-xl font-semibold text-sm transition-all duration-200 border bg-amber-600 text-white border-amber-600 shadow" data-amount="100">$100</button>
                         <button class="donation-btn py-3 rounded-xl font-semibold text-sm transition-all duration-200 border bg-gray-50 text-gray-700 border-gray-200 hover:border-amber-400 hover:text-amber-700" data-amount="250">$250</button>
                         <button class="donation-btn py-3 rounded-xl font-semibold text-sm transition-all duration-200 border bg-gray-50 text-gray-700 border-gray-200 hover:border-amber-400 hover:text-amber-700" data-amount="500">$500</button>
@@ -386,7 +332,6 @@ nav.sc{box-shadow:0 2px 20px rgba(15,76,58,.08);}
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -451,7 +396,6 @@ nav.sc{box-shadow:0 2px 20px rgba(15,76,58,.08);}
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8 mb-12">
@@ -490,6 +434,81 @@ nav.sc{box-shadow:0 2px 20px rgba(15,76,58,.08);}
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Donation Interaction Logic
+        let selectedAmount = 100;
+        const donationButtons = document.querySelectorAll('.donation-btn');
+        const customAmountInput = document.getElementById('customAmount');
+        const impactTextElement = document.getElementById('impactText');
+
+        function updateImpactText() {
+            const amount = selectedAmount;
+            let text = 'Every dollar helps bring our community center closer to reality.';
+            if (amount >= 2500) text = 'Founding-level gift! You will be recognized as a Community Founder.';
+            else if (amount >= 1000) text = 'Covers legal and permitting costs for a portion of the project.';
+            else if (amount >= 500) text = 'Funds one month of community outreach and planning meetings.';
+            else if (amount >= 250) text = 'Covers survey materials and community needs assessment.';
+            else if (amount >= 100) text = 'Contributes toward site evaluation and feasibility studies.';
+            impactTextElement.textContent = text;
+        }
+
+        function setActiveButton(clickedBtn) {
+            // Reset all buttons to inactive styling
+            donationButtons.forEach(btn => {
+                btn.classList.remove('bg-amber-600', 'text-white', 'border-amber-600', 'shadow');
+                btn.classList.add('bg-gray-50', 'text-gray-700', 'border-gray-200');
+            });
+            // Set clicked button to active styling
+            if (clickedBtn) {
+                clickedBtn.classList.remove('bg-gray-50', 'text-gray-700', 'border-gray-200');
+                clickedBtn.classList.add('bg-amber-600', 'text-white', 'border-amber-600', 'shadow');
+            }
+        }
+
+        donationButtons.forEach(btn => {
+            btn.addEventListener('click', function() {
+                setActiveButton(this);
+                customAmountInput.value = ''; // Clear custom input
+                selectedAmount = parseInt(this.dataset.amount);
+                updateImpactText();
+            });
+        });
+
+        customAmountInput.addEventListener('input', function() {
+            if (this.value) {
+                setActiveButton(null); // Clear button selection
+                selectedAmount = parseInt(this.value) || 100;
+            } else {
+                selectedAmount = 100; // Reset to default if cleared
+            }
+            updateImpactText();
+        });
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for reaching out! We will respond within 24 hours.');
+            this.reset();
+        });
+
+        // Initialize default impact text
+        updateImpactText();
+    </script>
 </body>
 </html>
