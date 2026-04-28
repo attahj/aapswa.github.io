@@ -9,47 +9,39 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; }
-        .hero-bg { 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1920'); 
-            background-size: cover; 
-            background-position: center; 
-        }
+        .hero-bg { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&cs=tinysrgb&w=1920'); background-size: cover; background-position: center; }
         .animate-bounce { animation: bounce 2s infinite; }
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        .donation-btn.active {
-            background-color: #d97706; /* amber-600 */
-            color: white;
-            border-color: #d97706;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
     </style>
 </head>
 <body class="bg-white">
+    <!-- Navigation Header -->
     <header class="fixed w-full top-0 z-50 bg-white shadow-md">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-amber-600">🇦🇫 AAPS</h1>
+            <h1 class="text-2xl font-bold text-amber-600">AAPS</h1>
             <nav class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-700 hover:text-amber-600 transition font-medium">About</a>
-                <a href="#project" class="text-gray-700 hover:text-amber-600 transition font-medium">Project</a>
-                <a href="#progress" class="text-gray-700 hover:text-amber-600 transition font-medium">Progress</a>
-                <a href="#donate" class="text-gray-700 hover:text-amber-600 transition font-medium">Donate</a>
-                <a href="#contact" class="text-gray-700 hover:text-amber-600 transition font-medium">Contact</a>
+                <a href="#about" class="text-gray-700 hover:text-amber-600 transition">About</a>
+                <a href="#project" class="text-gray-700 hover:text-amber-600 transition">Project</a>
+                <a href="#progress" class="text-gray-700 hover:text-amber-600 transition">Progress</a>
+                <a href="#donate" class="text-gray-700 hover:text-amber-600 transition">Donate</a>
+                <a href="#contact" class="text-gray-700 hover:text-amber-600 transition">Contact</a>
             </nav>
             <button id="mobileMenuBtn" class="md:hidden text-gray-700 text-2xl">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
-        <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200 p-4">
-            <a href="#about" class="block py-3 text-gray-700 hover:text-amber-600">About</a>
-            <a href="#project" class="block py-3 text-gray-700 hover:text-amber-600">Project</a>
-            <a href="#progress" class="block py-3 text-gray-700 hover:text-amber-600">Progress</a>
-            <a href="#donate" class="block py-3 text-gray-700 hover:text-amber-600">Donate</a>
-            <a href="#contact" class="block py-3 text-gray-700 hover:text-amber-600">Contact</a>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
+            <a href="#about" class="block px-6 py-3 text-gray-700 hover:bg-amber-50">About</a>
+            <a href="#project" class="block px-6 py-3 text-gray-700 hover:bg-amber-50">Project</a>
+            <a href="#progress" class="block px-6 py-3 text-gray-700 hover:bg-amber-50">Progress</a>
+            <a href="#donate" class="block px-6 py-3 text-gray-700 hover:bg-amber-50">Donate</a>
+            <a href="#contact" class="block px-6 py-3 text-gray-700 hover:bg-amber-50">Contact</a>
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero-bg relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
             <p class="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-4">Afghan Association of Puget Sound</p>
@@ -61,7 +53,7 @@
                 We are creating a permanent community center to serve Afghan families across North Seattle, Lynnwood, Shoreline, Edmonds, Bothell, Everett, and the communities in between.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#project" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 shadow-lg inline-block">
+                <a href="#project" class="bg-amber-600 hover:bg-amber-500 text-white font-semibold px-8 py-4 rounded-full transition-all duration-200 shadow-lg hover:shadow-amber-600/30 inline-block">
                     Learn About the Project
                 </a>
                 <a href="#donate" class="border-2 border-white text-white hover:bg-white hover:text-stone-900 font-semibold px-8 py-4 rounded-full transition-all duration-200 inline-block">
@@ -74,165 +66,382 @@
         </a>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
                     <p class="text-amber-600 text-sm font-semibold tracking-widest uppercase mb-3">Who We Are</p>
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Afghan Association <br> of Puget Sound</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        Afghan Association <br> of Puget Sound
+                    </h2>
                     <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                        The Afghan Association of Puget Sound represents thousands of Afghan families in the greater Seattle area. From longtime residents to recently resettled families, our community is vibrant and resilient.
+                        The Afghan Association of Puget Sound represents thousands of Afghan families who have made the greater Seattle area their home. From longtime residents to recently resettled families, our community is vibrant, resilient, and deeply committed to one another.
                     </p>
-                    <div class="grid grid-cols-3 gap-4 mb-8">
-                        <div><p class="text-3xl font-bold text-amber-600">300+</p><p class="text-gray-500 text-xs">Families served</p></div>
-                        <div><p class="text-3xl font-bold text-amber-600">7</p><p class="text-gray-500 text-xs">Local Cities</p></div>
-                        <div><p class="text-3xl font-bold text-amber-600">2021</p><p class="text-gray-500 text-xs">Founded</p></div>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        For years, we have gathered in homes, parks, and borrowed halls. Now, we are working toward something permanent — a dedicated space where every Afghan family in our region can find community, support, and belonging.
+                    </p>
+                    <div class="flex gap-8">
+                        <div>
+                            <p class="text-4xl font-bold text-amber-600">300+</p>
+                            <p class="text-gray-500 text-sm mt-1">Afghan families served</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-bold text-amber-600">7</p>
+                            <p class="text-gray-500 text-sm mt-1">Cities in our region</p>
+                        </div>
+                        <div>
+                            <p class="text-4xl font-bold text-amber-600">2021</p>
+                            <p class="text-gray-500 text-sm mt-1">Community founded</p>
+                        </div>
                     </div>
                 </div>
-                <div class="space-y-4">
-                    <div class="flex gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
-                        <div class="shrink-0 w-10 h-10 bg-amber-600 rounded-lg flex items-center justify-center text-white"><i class="fas fa-users"></i></div>
-                        <div><h3 class="font-bold text-gray-900">Community First</h3><p class="text-sm text-gray-600">Grassroots organization founded by families for families.</p></div>
+                <div class="space-y-6">
+                    <div class="flex gap-5 p-6 rounded-2xl bg-gray-50 hover:bg-amber-50 transition-colors duration-200 border border-gray-200">
+                        <div class="shrink-0 w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center shadow">
+                            <i class="fas fa-users text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-900 font-semibold text-lg mb-1">Community First</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">We are a grassroots organization founded by Afghan families, for Afghan families — rooted in the belief that belonging is built together.</p>
+                        </div>
                     </div>
-                    <div class="flex gap-4 p-5 rounded-xl bg-gray-50 border border-gray-100">
-                        <div class="shrink-0 w-10 h-10 bg-amber-600 rounded-lg flex items-center justify-center text-white"><i class="fas fa-heart"></i></div>
-                        <div><h3 class="font-bold text-gray-900">Cultural Preservation</h3><p class="text-sm text-gray-600">A living space for Afghan language, arts, and traditions.</p></div>
+                    <div class="flex gap-5 p-6 rounded-2xl bg-gray-50 hover:bg-amber-50 transition-colors duration-200 border border-gray-200">
+                        <div class="shrink-0 w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center shadow">
+                            <i class="fas fa-heart text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-900 font-semibold text-lg mb-1">Cultural Preservation</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">Our center will be a living space for Afghan language, arts, traditions, and heritage — ensuring future generations stay connected to their roots.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5 p-6 rounded-2xl bg-gray-50 hover:bg-amber-50 transition-colors duration-200 border border-gray-200">
+                        <div class="shrink-0 w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center shadow">
+                            <i class="fas fa-globe text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-gray-900 font-semibold text-lg mb-1">Bridging Two Worlds</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">We help newly arrived Afghans navigate American life while celebrating the rich culture and values we bring to the Pacific Northwest.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Project Section -->
     <section id="project" class="py-24 bg-gray-900">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16 text-white">
+            <div class="text-center mb-16">
                 <p class="text-amber-400 text-sm font-semibold tracking-widest uppercase mb-3">Our Vision</p>
-                <h2 class="text-4xl font-bold mb-4">The Afghan Community Center</h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">A 10,000–15,000 sq ft facility in the North Seattle corridor for gathering, learning, and healing.</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                    The Afghan Community Center
+                </h2>
+                <p class="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
+                    We are planning and fundraising for a permanent, purpose-built community center to serve Afghan families across the greater North Seattle and South Snohomish County region. This will be a place of gathering, learning, healing, and joy.
+                </p>
             </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700">
-                    <i class="fas fa-book text-amber-500 text-2xl mb-4"></i>
-                    <h3 class="text-white font-bold mb-2">Education</h3>
-                    <p class="text-gray-400 text-sm">After-school programs and Dari/Pashto language classes.</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <div class="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-amber-600/40 rounded-2xl p-6 transition-all duration-200 group">
+                    <div class="w-12 h-12 bg-amber-600/20 group-hover:bg-amber-600 rounded-xl flex items-center justify-center mb-4 transition-colors duration-200">
+                        <i class="fas fa-book text-amber-400 group-hover:text-white text-lg"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Education & Tutoring</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">After-school programs, language classes in Dari and Pashto, and adult literacy support.</p>
                 </div>
-                <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700">
-                    <i class="fas fa-utensils text-amber-500 text-2xl mb-4"></i>
-                    <h3 class="text-white font-bold mb-2">Dining Hall</h3>
-                    <p class="text-gray-400 text-sm">Space for Eid celebrations, weddings, and community meals.</p>
+
+                <div class="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-amber-600/40 rounded-2xl p-6 transition-all duration-200 group">
+                    <div class="w-12 h-12 bg-amber-600/20 group-hover:bg-amber-600 rounded-xl flex items-center justify-center mb-4 transition-colors duration-200">
+                        <i class="fas fa-utensils text-amber-400 group-hover:text-white text-lg"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Community Dining Hall</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">A gathering space for Eid celebrations, Nowruz, weddings, and weekly community meals.</p>
                 </div>
-                <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700">
-                    <i class="fas fa-handshake text-amber-500 text-2xl mb-4"></i>
-                    <h3 class="text-white font-bold mb-2">Resettlement</h3>
-                    <p class="text-gray-400 text-sm">Assistance with housing, legal, and healthcare navigation.</p>
+
+                <div class="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-amber-600/40 rounded-2xl p-6 transition-all duration-200 group">
+                    <div class="w-12 h-12 bg-amber-600/20 group-hover:bg-amber-600 rounded-xl flex items-center justify-center mb-4 transition-colors duration-200">
+                        <i class="fas fa-music text-amber-400 group-hover:text-white text-lg"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Cultural Arts Center</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Space for traditional Afghan music, dance, storytelling, and visual arts exhibitions.</p>
                 </div>
+
+                <div class="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-amber-600/40 rounded-2xl p-6 transition-all duration-200 group">
+                    <div class="w-12 h-12 bg-amber-600/20 group-hover:bg-amber-600 rounded-xl flex items-center justify-center mb-4 transition-colors duration-200">
+                        <i class="fas fa-briefcase text-amber-400 group-hover:text-white text-lg"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Career & Business Services</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Job placement assistance, small business support, and professional development workshops.</p>
+                </div>
+
+                <div class="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-amber-600/40 rounded-2xl p-6 transition-all duration-200 group">
+                    <div class="w-12 h-12 bg-amber-600/20 group-hover:bg-amber-600 rounded-xl flex items-center justify-center mb-4 transition-colors duration-200">
+                        <i class="fas fa-baby text-amber-400 group-hover:text-white text-lg"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Youth & Family Programs</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Childcare, youth sports, mentorship programs, and family counseling services.</p>
+                </div>
+
+                <div class="bg-gray-800 hover:bg-gray-700 border border-gray-700 hover:border-amber-600/40 rounded-2xl p-6 transition-all duration-200 group">
+                    <div class="w-12 h-12 bg-amber-600/20 group-hover:bg-amber-600 rounded-xl flex items-center justify-center mb-4 transition-colors duration-200">
+                        <i class="fas fa-handshake text-amber-400 group-hover:text-white text-lg"></i>
+                    </div>
+                    <h3 class="text-white font-semibold text-lg mb-2">Resettlement Support</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Assistance navigating housing, healthcare, legal resources, and government services.</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-amber-700 to-amber-600 rounded-3xl p-10 md:p-14 text-center">
+                <h3 class="text-white text-3xl md:text-4xl font-bold mb-4">Target: $2,500,000</h3>
+                <p class="text-amber-100 text-lg max-w-2xl mx-auto mb-8">
+                    We are raising funds to purchase and develop a facility of approximately 10,000–15,000 sq ft in the North Seattle / South Snohomish County corridor. Every dollar brings us closer to breaking ground.
+                </p>
+                <a href="#donate" class="inline-block bg-white text-amber-700 font-bold px-10 py-4 rounded-full hover:bg-amber-50 transition-colors duration-200 shadow-lg">
+                    Contribute to the Fund
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- Progress Section -->
     <section id="progress" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-12">Campaign Progress</h2>
-            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-200 max-w-4xl mx-auto">
-                <div class="grid md:grid-cols-3 gap-8 mb-8">
-                    <div><p class="text-4xl font-bold text-amber-600">$487,500</p><p class="text-gray-500">Raised</p></div>
-                    <div><p class="text-4xl font-bold text-amber-600">$2.01M</p><p class="text-gray-500">Remaining</p></div>
-                    <div><p class="text-4xl font-bold text-amber-600">1,200+</p><p class="text-gray-500">Donors</p></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-amber-600 text-sm font-semibold tracking-widest uppercase mb-3">Campaign Progress</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Toward Our Goal
+                </h2>
+            </div>
+
+            <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-8">
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center">
+                        <p class="text-5xl font-bold text-amber-600 mb-2">$487,500</p>
+                        <p class="text-gray-600 font-semibold">Raised to Date</p>
+                        <p class="text-gray-500 text-sm mt-2">(19.5% of goal)</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-5xl font-bold text-amber-600 mb-2">$2,012,500</p>
+                        <p class="text-gray-600 font-semibold">Remaining</p>
+                        <p class="text-gray-500 text-sm mt-2">(80.5% of goal)</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-5xl font-bold text-amber-600 mb-2">1,200+</p>
+                        <p class="text-gray-600 font-semibold">Contributors</p>
+                        <p class="text-gray-500 text-sm mt-2">Generous supporters</p>
+                    </div>
                 </div>
-                <div class="w-full bg-gray-200 rounded-full h-4 mb-4">
-                    <div class="bg-amber-600 h-full rounded-full" style="width: 19.5%;"></div>
+
+                <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+                    <div class="bg-gradient-to-r from-amber-600 to-amber-500 h-full rounded-full" style="width: 19.5%;"></div>
                 </div>
-                <p class="text-sm text-gray-500">19.5% of $2.5 Million Goal</p>
+                <p class="text-center text-gray-600 mt-4 text-sm">$487,500 of $2,500,000 raised</p>
             </div>
         </div>
     </section>
 
+    <!-- Donate Section -->
     <section id="donate" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4">Make a Donation</h2>
-                <p class="text-gray-500">Help us open the doors for future generations.</p>
+            <div class="text-center mb-16">
+                <p class="text-amber-600 text-sm font-semibold tracking-widest uppercase mb-3">Support Our Mission</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Make a Donation</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+                    Every contribution — large or small — brings us closer to opening the doors of our community center. Your generosity will be felt for generations.
+                </p>
             </div>
-            <div class="grid lg:grid-cols-2 gap-10">
-                <div class="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
-                    <h3 class="font-bold mb-6">Select Amount</h3>
-                    <div class="grid grid-cols-3 gap-3 mb-6">
-                        <button class="donation-btn py-3 border rounded-xl hover:border-amber-600" data-amount="50">$50</button>
-                        <button class="donation-btn py-3 border rounded-xl active" data-amount="100">$100</button>
-                        <button class="donation-btn py-3 border rounded-xl hover:border-amber-600" data-amount="250">$250</button>
-                        <button class="donation-btn py-3 border rounded-xl hover:border-amber-600" data-amount="500">$500</button>
-                        <button class="donation-btn py-3 border rounded-xl hover:border-amber-600" data-amount="1000">$1K</button>
-                        <button class="donation-btn py-3 border rounded-xl hover:border-amber-600" data-amount="2500">$2.5K</button>
+
+            <div class="grid lg:grid-cols-2 gap-10 items-start">
+                <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-8">
+                    <h3 class="text-gray-900 font-bold text-xl mb-6">Choose an Amount</h3>
+
+                    <div class="grid grid-cols-3 gap-3 mb-4">
+                        <button class="donation-btn py-3 rounded-xl font-semibold text-sm transition-all duration-200 border bg-amber-600 text-white border-amber-600 shadow" data-amount="50">$50</button>
+                        <button class="donation-btn py-3 rounded-xl font-semibold text-sm transition-all duration-200 border bg-amber-600 text-white border-amber-600 shadow" data-amount="100">$100</button>
+                        <button class="donation-btn py-3 rounded-xl font-semibold text-sm transition-all duration-200 border bg-gray-50 text-gray-700 border-gray-200 hover:border-amber-400 hover:text-amber-700" data-amount="250">$250</button>
+                        <button class="donation-btn py-3 rounded-xl font-semibold text-sm transition-all duration-200 border bg-gray-50 text-gray-700 border-gray-200 hover:border-amber-400 hover:text-amber-700" data-amount="500">$500</button>
+                        <button class="donation-btn py-3 rounded-xl font-semibold text-sm transition-all duration-200 border bg-gray-50 text-gray-700 border-gray-200 hover:border-amber-400 hover:text-amber-700" data-amount="1000">$1K</button>
+                        <button class="donation-btn py-3 rounded-xl font-semibold text-sm transition-all duration-200 border bg-gray-50 text-gray-700 border-gray-200 hover:border-amber-400 hover:text-amber-700" data-amount="2500">$2.5K</button>
                     </div>
-                    <div class="bg-amber-50 p-4 rounded-xl mb-6">
-                        <p class="text-amber-800 text-sm font-bold">Your Impact</p>
+
+                    <div class="mb-6">
+                        <label class="block text-gray-600 text-sm font-medium mb-2">Or enter a custom amount</label>
+                        <div class="relative">
+                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 font-semibold">$</span>
+                            <input type="number" id="customAmount" placeholder="Enter amount" class="w-full pl-8 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent text-gray-900">
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-5 mb-6">
+                        <p class="text-amber-800 text-sm font-semibold mb-1">Your Impact</p>
                         <p id="impactText" class="text-amber-700 text-sm">Every dollar helps bring our community center closer to reality.</p>
                     </div>
-                    <button class="w-full bg-amber-600 text-white py-4 rounded-xl font-bold shadow-lg">Donate Now</button>
+
+                    <p class="text-gray-400 text-xs text-center">Afghan Association of Puget Sound is a registered nonprofit. Donations may be tax-deductible. Please consult your tax advisor.</p>
                 </div>
-                <div class="space-y-4">
-                    <div class="p-6 bg-blue-50 rounded-xl border border-blue-100">
-                        <h4 class="font-bold text-blue-900 mb-2"><i class="fas fa-mobile-alt mr-2"></i>Venmo</h4>
-                        <p class="text-blue-800 text-sm">Send to: <strong>@afghancommunityps</strong></p>
+
+                <div class="space-y-5">
+                    <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-8">
+                        <h3 class="text-gray-900 font-bold text-xl mb-6">Donation Methods</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="p-4 bg-blue-50 border border-blue-200 rounded-xl hover:shadow-md transition-shadow cursor-pointer">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <i class="fas fa-credit-card text-blue-600 text-xl"></i>
+                                    <h4 class="font-semibold text-gray-900">Online Donation</h4>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-3">Use our secure payment portal (processed through trusted payment provider)</p>
+                                <button class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-semibold">
+                                    Donate Now
+                                </button>
+                            </div>
+
+                            <div class="p-4 bg-green-50 border border-green-200 rounded-xl">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <i class="fas fa-mobile-alt text-green-600 text-xl"></i>
+                                    <h4 class="font-semibold text-gray-900">Venmo / Mobile Payment</h4>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-2">Send to: @afghancommunityps</p>
+                                <p class="text-gray-500 text-xs">Note: "Community Center Donation"</p>
+                            </div>
+
+                            <div class="p-4 bg-purple-50 border border-purple-200 rounded-xl">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <i class="fas fa-building text-purple-600 text-xl"></i>
+                                    <h4 class="font-semibold text-gray-900">Bank Transfer</h4>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-2">Contact us for bank details and wire information</p>
+                                <p class="text-gray-500 text-xs">Email: donate@afghancommunity.org</p>
+                            </div>
+
+                            <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <i class="fas fa-check-circle text-yellow-600 text-xl"></i>
+                                    <h4 class="font-semibold text-gray-900">Check</h4>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-2">Afghan Association of Puget Sound</p>
+                                <p class="text-gray-500 text-xs">Request mailing address by contacting us</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-6 bg-green-50 rounded-xl border border-green-100">
-                        <h4 class="font-bold text-green-900 mb-2"><i class="fas fa-envelope mr-2"></i>Email Contact</h4>
-                        <p class="text-green-800 text-sm"><strong>info@afghancommunity.org</strong></p>
+
+                    <div class="bg-amber-50 rounded-3xl border border-amber-200 p-8">
+                        <h3 class="text-gray-900 font-bold text-lg mb-4">Sponsorship Opportunities</h3>
+                        <p class="text-gray-600 text-sm mb-4">Businesses and organizations interested in major partnerships, naming rights, or sponsorship opportunities are welcome to reach out.</p>
+                        <button class="w-full bg-amber-600 text-white py-3 px-4 rounded-full hover:bg-amber-700 transition-colors font-semibold">
+                            Discuss Sponsorship
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="py-24 bg-gray-50">
-        <div class="max-w-3xl mx-auto px-6 bg-white p-10 rounded-3xl shadow-sm border border-gray-200">
-            <h2 class="text-3xl font-bold mb-8 text-center">Contact Us</h2>
-            <form id="contactForm" class="space-y-4">
-                <input type="text" placeholder="Name" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-amber-500 outline-none">
-                <input type="email" placeholder="Email" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-amber-500 outline-none">
-                <textarea placeholder="Message" rows="4" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-amber-500 outline-none"></textarea>
-                <button type="submit" class="w-full bg-amber-600 text-white font-bold py-3 rounded-lg">Send Message</button>
-            </form>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-amber-600 text-sm font-semibold tracking-widest uppercase mb-3">Get in Touch</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Contact Us</h2>
+                <p class="text-gray-500 text-lg max-w-2xl mx-auto">
+                    Have questions? Want to get involved? Reach out to us anytime.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-envelope text-amber-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-gray-900 font-semibold text-lg mb-2">Email</h3>
+                    <p class="text-gray-600">info@afghancommunity.org</p>
+                    <p class="text-gray-500 text-sm mt-2">Response within 24 hours</p>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-amber-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-gray-900 font-semibold text-lg mb-2">Phone</h3>
+                    <p class="text-gray-600">(206) 555-0142</p>
+                    <p class="text-gray-500 text-sm mt-2">Monday - Friday, 9am - 5pm PT</p>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-amber-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-gray-900 font-semibold text-lg mb-2">Location</h3>
+                    <p class="text-gray-600">North Seattle</p>
+                    <p class="text-gray-500 text-sm mt-2">Greater Puget Sound Region</p>
+                </div>
+            </div>
+
+            <div class="mt-16 max-w-2xl mx-auto">
+                <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-10">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 text-sm font-semibold mb-2">Name</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-semibold mb-2">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Your email">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-semibold mb-2">Message</label>
+                            <textarea required rows="4" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" placeholder="Your message"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-amber-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-amber-700 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
-        <p class="text-white font-bold mb-4">Afghan Association of Puget Sound</p>
-        <p class="text-xs">&copy; 2026 AAPS. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Afghan Association of Puget Sound</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Building a permanent community center for Afghan families across the greater Seattle area.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="text-gray-400 hover:text-amber-400 transition">About</a></li>
+                        <li><a href="#project" class="text-gray-400 hover:text-amber-400 transition">Project</a></li>
+                        <li><a href="#donate" class="text-gray-400 hover:text-amber-400 transition">Donate</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-amber-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-amber-400 transition text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-400 transition text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-400 transition text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-amber-400 transition text-xl"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 text-sm mb-3">Get updates on our progress</p>
+                    <input type="email" placeholder="Your email" class="w-full px-3 py-2 border border-gray-700 bg-gray-800 text-white rounded text-sm mb-2 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                    <button class="w-full bg-amber-600 text-white py-2 px-3 rounded text-sm font-semibold hover:bg-amber-700 transition">Subscribe</button>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
+                <p>&copy; 2026 Afghan Association of Puget Sound. All rights reserved. | <a href="#" class="hover:text-amber-400">Privacy Policy</a></p>
+            </div>
+        </div>
     </footer>
 
-    <script>
-        // Navigation toggle
-        const menuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-
-        // Donation logic
-        const donationBtns = document.querySelectorAll('.donation-btn');
-        const impactText = document.getElementById('impactText');
-
-        donationBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                donationBtns.forEach(b => {
-                    b.classList.remove('active', 'bg-amber-600', 'text-white', 'border-amber-600');
-                    b.classList.add('bg-gray-50', 'text-gray-700', 'border-gray-200');
-                });
-                btn.classList.add('active');
-                btn.classList.remove('bg-gray-50', 'text-gray-700', 'border-gray-200');
-                btn.classList.add('bg-amber-600', 'text-white', 'border-amber-600');
-                
-                const amount = btn.dataset.amount;
-                if(amount >= 2500) impactText.innerText = "Founding-level gift! You will be recognized as a Community Founder.";
-                else if(amount >= 1000) impactText.innerText = "Covers essential legal and permitting costs for the facility.";
-                else impactText.innerText = "Every dollar helps bring our community center closer to reality.";
-            });
-        });
-
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Message sent!');
-            e.target.reset();
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
